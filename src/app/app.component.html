@@ -1,10 +1,25 @@
 <mat-toolbar color="primary">
   <span>Form with ngx-formly</span>
   <button mat-button color="basic" (click)="addInput()">Add Input</button>
-</mat-toolbar>
+  <button mat-button (click)="openDialog()">Launch dialog</button>
 
-<form [formGroup]="form" >
-  <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form">
-  </formly-form>
-  <button type="submit" mat-button>Submit</button>
-</form>
+</mat-toolbar>
+<section>
+  <div class="sideMenu">
+    <form [formGroup]="staticForm" >
+      <formly-form [model]="staticModel" 
+                    [fields]="staticFields" 
+                    [options]="staticOptions" 
+                    [form]="staticForm">
+      </formly-form>
+      <button type="submit" mat-button (click)="submit()">Add field</button>
+    </form>
+  </div>
+  <div>
+    <form [formGroup]="form" >
+      <formly-form [model]="model" [fields]="fields" [options]="options" [form]="form">
+      </formly-form>
+      <button type="submit" mat-button (click)="delete()">Delete</button>
+    </form>
+  </div>
+</section>

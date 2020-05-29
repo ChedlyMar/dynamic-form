@@ -2,32 +2,19 @@
   "title": "Angular Formly",
   "type": "object",
   "properties":{
-    "firstName": {
+    "label": {
       "type": "string",
-      "title": "First name",
-      "default": "Chuck"
+      "title": "Label"
+      
     },
-    "lastName": {
+    "placeholder": {
       "type": "string",
-      "title": "Last name"
+      "title": "Placeholder"
     },
-      "age": {
-        "type": "integer",
-        "title": "Age"
-      },
-      "bio": {
-        "type": "string",
-        "title": "Bio"
-      },
-      "password": {
-        "type": "string",
-        "title": "Password",
-        "minLength": 3
-      },
-      "telephone": {
-        "type": "string",
-        "title": "Telephone",
-        "minLength": 10
-      }
+    "required": {
+      "type": "boolean",
+      "title": "Requred",
+      "default": false
     }
+  }
 }

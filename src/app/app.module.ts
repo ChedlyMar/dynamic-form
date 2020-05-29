@@ -12,10 +12,12 @@ import { FormlyMaterialModule } from '@ngx-formly/material';
 import { HttpClientModule } from '@angular/common/http';
 
 import { jsonSchemaTransform } from './jsonSchema.transformer';
+import { DialogComponent } from './dialog/dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DialogComponent,
     
   ],
   imports: [
@@ -33,6 +35,10 @@ import { jsonSchemaTransform } from './jsonSchema.transformer';
         {
           name:'integer',
           extends: 'input'
+        },
+        {
+          name:'boolean',
+          extends:'checkbox'
         }
       ],
       validationMessages: [
